@@ -1,0 +1,4 @@
+name = My Blog Module
+description = "Custom code for the blog project"
+package = Components
+core = 7.x
