@@ -4,7 +4,7 @@ defaults[projects][subdir] = "contrib"
 
 ;Drupal Core Version
 core = 7.x
-projects[drupal][version] = 7.43
+projects[drupal][version] = 7.50
 
 ;contributed themes
 projects[bootstrap][subdir] = ""
