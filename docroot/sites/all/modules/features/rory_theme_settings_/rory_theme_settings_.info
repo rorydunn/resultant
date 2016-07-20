@@ -17,6 +17,7 @@ dependencies[] = imce_wysiwyg
 dependencies[] = jquery_update
 dependencies[] = menu
 dependencies[] = menu_attributes
+dependencies[] = scroll_to_destination_anchors
 dependencies[] = strongarm
 dependencies[] = wysiwyg
 dependencies[] = wysiwyg_mediaembed
