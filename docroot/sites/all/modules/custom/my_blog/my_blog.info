@@ -1,4 +1,4 @@
 name = My Blog Module
-description = "Custom code for the blog project"
+description = "Custom menu theming"
 package = Components
 core = 7.x

@@ -113,14 +113,34 @@
       </div>
     <?php endif; ?>
   </div>
+  <div class="row">
+    <?php if (!empty($site_slogan)): ?>
+      <p class="lead"><?php print $site_slogan; ?></p>
+    <?php endif; ?>
+    <div class="highlight-btns">
+      <ul class="list-inline">
+        <li>
+          <a href="/documents/rorydunnresume.pdf" target="_blank" class="btn btn-success">
+            <i class="fa fa-download"></i> Resume
+          </a>
+        </li>
+        <li>
+          <a href="/contact" class="btn btn-success">Contact Me</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div class="row">
+  <div class="col-xs-8 col-xs-offset-2 blog-link">
+    <p>Check out my posts</p>
+    <a href="#blog"><i class="fa fa-chevron-circle-down fa-1 blog-link"></i></a>
+  </div>
+</div>
 </header>
 
-<div class="main-container <?php print $container_class; ?>">
+<div id="blog" class="main-container <?php print $container_class; ?>">
 
   <header role="banner" id="page-header">
-    <!-- <?php if (!empty($site_slogan)): ?>
-      <p class="lead"><?php print $site_slogan; ?></p>
-    <?php endif; ?> -->
 
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->

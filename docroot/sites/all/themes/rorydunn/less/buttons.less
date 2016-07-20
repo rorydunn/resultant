@@ -1,0 +1,59 @@
+//Custom Button Edits
+
+//== Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              #303030;   // #333
+@gray:                   #464545;
+@gray-light:             #999;   // #999
+@gray-lighter:           #EBEBEB; // #eee
+
+@brand-primary:         #375a7f;
+@brand-success:         #00bc8c;
+@brand-info:            #3498DB;
+@brand-warning:         #F39C12;
+@brand-danger:          #E74C3C;
+
+//== Buttons
+//
+//## For each of Bootstrap's buttons, define text, background and border color.
+
+@btn-font-weight:                normal;
+
+@btn-default-color:              @text-color;
+@btn-default-bg:                 @brand-primary;
+@btn-default-border:             @btn-default-bg;
+
+@btn-primary-color:              #fff;
+@btn-primary-bg:                 @brand-primary;
+@btn-primary-border:             @btn-primary-bg;
+
+@btn-success-color:              @btn-primary-color;
+@btn-success-bg:                 @brand-success;
+@btn-success-border:             @btn-success-bg;
+
+@btn-info-color:                 @btn-success-color;
+@btn-info-bg:                    @brand-info;
+@btn-info-border:                @btn-info-bg;
+
+@btn-warning-color:              @btn-success-color;
+@btn-warning-bg:                 @brand-warning;
+@btn-warning-border:             @btn-warning-bg;
+
+@btn-danger-color:               @btn-success-color;
+@btn-danger-bg:                  @brand-danger;
+@btn-danger-border:              @btn-danger-bg;
+
+@btn-link-disabled-color:        @gray-light;
+
+// Allows for customizing button radius independently from global border radius
+@btn-border-radius-base:         @border-radius-base;
+@btn-border-radius-large:        @border-radius-large;
+@btn-border-radius-small:        @border-radius-small;
+
+.btn {
+  border-radius: 0px;
+}

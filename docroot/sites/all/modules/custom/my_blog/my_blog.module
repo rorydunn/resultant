@@ -6,8 +6,10 @@ function my_blog_block_info() {
 
   $blocks = array();
   $blocks['custom_footer_block'] = array(
+    //Sets Block Name
     'info' => t('Custom Footer Block'),
     'visibility' => BLOCK_VISIBILITY_LISTED,
+    //Pages where block is displayed set here
     'pages' => "*",
   );
 
@@ -20,26 +22,13 @@ function my_blog_block_info() {
 function my_blog_block_view($delta = '') {
   // The $delta parameter tells us which block is being requested.
   if ($delta == 'custom_footer_block') {
+
+    //Gets the links information for the specified menu
     $links = menu_build_tree('menu-footer-menu');
-    $active_trail = menu_get_active_trail();
-    //Last item of the array is removed from the array and returned.
-    //This is the current node/add/page and is used to determine which page is open
-    $active_trail = array_pop($active_trail);
 
-    // foreach ($links as $key => $link) {
-    //   if ($links[$key]['link']['link_path'] == $active_trail['link_path']) {
-    //     //Searches $links array for the active link and determines where it is in the array
-    //     $position = array_search($key, array_keys($links));
-    //     //Removes the remainder of position/ to determine which group of menu items should be displayed
-    //     //when the active link is selected.
-    //     $position -= $position % BLUEPRINT_MENU_VISBILE_MENU_ITEMS;
-    //   }
-    // }
-
+    //Provides template with required data to theme the menu
     $block['content'] = theme("custom_footer_block", array(
         'links' => $links,
-        'active_trail' => $active_trail,
-        // 'position' => $position,
       )
     );
   }
@@ -59,27 +48,3 @@ function my_blog_theme($existing, $type, $theme, $path) {
   );
   return $theme;
 }
-
-// /**
-//  * Implements hook_block_list_alter().
-//  */
-// function my_blog_block_list_alter(&$blocks) {
-//  //Determines node type if a node edit page
-//  if ($menu_object = menu_get_object()) {
-//    $type = $menu_object->type;
-//  }
-//  //Determines node type if a node add page
-//  else {
-//    $menu_item = menu_get_item();
-//    $type = $menu_item['page_arguments'][0];
-//  }
-//  //Disables wide_menu_block on blueprint add and edit pages
-//  if ($type == 'blueprint') {
-//    foreach ($blocks as $block) {
-//      if ($block->delta == 'wide_menu_block') {
-//        $bid = $block->bid;
-//          unset($blocks[$bid]);
-//      }
-//    }
-//  }
-// }
