@@ -17,9 +17,7 @@ function about_me_component_menu_default_menu_links() {
     'router_path' => 'about',
     'link_title' => 'About Me',
     'options' => array(
-      'attributes' => array(
-        'title' => '',
-      ),
+      'attributes' => array(),
       'identifier' => 'user-menu_about-me:about',
     ),
     'module' => 'menu',
