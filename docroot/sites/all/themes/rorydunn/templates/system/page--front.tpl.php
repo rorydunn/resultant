@@ -120,7 +120,7 @@
     <div class="highlight-btns">
       <ul class="list-inline">
         <li>
-          <a href="/sites/default/files/rory_dunn_resume.pdf" target="_blank" class="btn btn-success">
+          <a href="/sites/default/files/rorydunnresume.pdf" target="_blank" class="btn btn-success">
             <i class="fa fa-download"></i> Resume
           </a>
         </li>
