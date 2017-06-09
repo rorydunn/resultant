@@ -113,7 +113,7 @@
       </div>
     <?php endif; ?>
   </div>
-  <div class="row">
+  <div class="central">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
     <?php endif; ?>
@@ -130,7 +130,7 @@
       </ul>
     </div>
   </div>
-</div class="row">
+</div>
   <div class="col-xs-8 col-xs-offset-2 blog-link">
     <p>Check out my posts</p>
     <a href="#blog"><i class="fa fa-chevron-circle-down fa-1 blog-link"></i></a>
