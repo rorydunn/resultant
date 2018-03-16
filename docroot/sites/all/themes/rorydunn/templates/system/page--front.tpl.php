@@ -73,46 +73,47 @@
  * @ingroup templates
  */
 ?>
+
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top" id="mainNav">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <?php if ($logo): ?>
+              <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
+                <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="img-circle" />
+              </a>
+            <?php endif; ?>
+
+            <?php if (!empty($site_name)): ?>
+              <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
+            <?php endif; ?>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+
+        <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+          <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1">
+            <nav role="navigation">
+              <?php if (!empty($primary_nav)): ?>
+                <?php print render($primary_nav); ?>
+              <?php endif; ?>
+              <?php if (!empty($secondary_nav)): ?>
+                <?php print render($secondary_nav); ?>
+              <?php endif; ?>
+              <?php if (!empty($page['navigation'])): ?>
+                <?php print render($page['navigation']); ?>
+              <?php endif; ?>
+            </nav>
+          </div>
+        <?php endif; ?>
+</nav>
+
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-  <div class="<?php print $container_class; ?>">
-    <div class="navbar-header">
-      <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="img-circle" />
-        </a>
-      <?php endif; ?>
 
-      <?php if (!empty($site_name)): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
-
-
-      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      <?php endif; ?>
-    </div>
-
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse">
-        <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($secondary_nav)): ?>
-            <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
-        </nav>
-      </div>
-    <?php endif; ?>
-  </div>
   <div class="central">
     <?php if (!empty($site_slogan)): ?>
       <p class="lead"><?php print $site_slogan; ?></p>
@@ -129,13 +130,12 @@
         </li>
       </ul>
     </div>
+    <div class="col-xs-8 col-xs-offset-2 blog-link">
+      <p>Check out my posts</p>
+      <a href="#blog"><i class="fa fa-chevron-circle-down fa-1 blog-link"></i></a>
+    </div>
   </div>
-</div>
-  <div class="col-xs-8 col-xs-offset-2 blog-link">
-    <p>Check out my posts</p>
-    <a href="#blog"><i class="fa fa-chevron-circle-down fa-1 blog-link"></i></a>
-  </div>
-</div>
+
 </header>
 
 <div id="blog" class="main-container <?php print $container_class; ?>">
