@@ -122,7 +122,7 @@
       <ul class="list-inline">
         <li>
           <a href="/sites/default/files/rorydunnresume.pdf" target="_blank" class="btn btn-success">
-            <i class="fa fa-download"></i> Resume
+            <i class="fa fa-download"></i> Résumé
           </a>
         </li>
         <li>

@@ -24,8 +24,9 @@ regions[page_bottom]    = 'Page bottom'
 ;; Stylesheets
 ;;;;;;;;;;;;;;;;;;;;;
 
-stylesheets[all][] = css/style.css
+
 stylesheets[all][] = css/contrib/agency.css
+stylesheets[all][] = css/style.css
 stylesheets[all][] = font-awesome/css/font-awesome.css
 
 ;;;;;;;;;;;;;;;;;;;;;

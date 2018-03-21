@@ -16,6 +16,15 @@ a.logo.navbar-btn {
   }
 }
 
+.navbar-shrink {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.navbar {
+    background-color: #fff;
+}
+
 .navbar-toggle {
   border-radius: 0px;
       border-top-left-radius: 0px;
@@ -39,11 +48,13 @@ img.img-circle {
     border-width: 3px;
 }
 
-@media (min-width: 769px) {
-.navbar-default .navbar-nav>li>a {
-    color: #fff;
-    font-size: 16px;
+@media (max-width: 769px) {
+  li.leaf {
+      text-align: left;
+  }
 }
+
+@media (min-width: 769px) {
 
 .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus {
     color: #fff;
@@ -56,10 +67,10 @@ img.img-circle {
 }
 
 @media (max-width: 768px) {
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    border-color: #e7e7e7;
-    background: #e7e7e7;
-  }
+  // .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  //   border-color: #e7e7e7;
+  //   background: #e7e7e7;
+  // }
   .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
       color: #333;
       background-color: #ccc;
